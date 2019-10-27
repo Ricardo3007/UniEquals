@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>UniEquals - </title>
+    <!-- Imagen Icon -->
 
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.min.css');?>">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/estilos.css');?>">
+    <!-- Datatables CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/dataTables.bootstrap4.min.css');?>" />
+    <!-- Notificaciones CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/toastr.min.css');?>" />
+    <!-- Multi-Select CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/select2.min.css');?>">
+</head>
+<body>
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">UniEquals</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
 
-    <title>UniEquals</title>
-        <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="css/cover.css">
-        
-      <!-- Imagen Icon -->
+    <main role="main" class="flex-shrink-0">
+        <div class="container-fluid">
+            <!-- Cargamos el contenido del Controller -->
+            <?php if(isset($content)) $this->load->view($content);  ?>
+        </div>
+    </main>
 
-   
-
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-  </head>
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-    <!-- <h3><a class="masthead-brand" href="#"><img src="" alt="logo "></a></h1> -->
-      <h3 class="masthead-brand">UniEquals</h3>
-      
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Inicio</a>
-        <a class="nav-link" href="#">Blog</a>
-        <a class="nav-link" href="#">Test</a>
-        <a class="nav-link" href="#">Login</a>
-        <a class="nav-link" href="#">Register</a>
-        <a class="nav-link" href="#">Nosotros</a>
-
-
-
-      </nav>
-    </div>
-  </header>
-  <main role="main" class="inner cover">
-      <div class="container-fluid">
-    <h1 class="cover-heading">UniEquals</h1>
-    <p class="lead">Escoger donde hacer tus estudios de educacion superior nunca fue tan sencillo.</p>
-    <p class="lead">
-      <a href=<?php echo base_url();?> class="btn btn-success btn-lg ">Adelante!</a>
-    </p>
-    </div>
-  </main>
-    
-
-    <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </div>
-  </footer>
-</div>
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
 </body>
-
-
-
+<script type="text/javascript" src="<?php echo base_url('/assets/js/jquery.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/jquery.dataTables.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/toastr.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/funciones.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/dataTables.bootstrap4.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/sweetalert.min.js');?>"></script>
+<script type="text/javascript" src="<?php echo base_url('/assets/js/select2.min.js');?>"></script>
 </html>
