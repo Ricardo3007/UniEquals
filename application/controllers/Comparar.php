@@ -14,6 +14,6 @@ class Comparar extends CI_Controller {
 	{
 	 	//$data['data']=$this->Comparar_model->getAll();	
 	 	$data['content']='comparar/index';
-	 	$this->load->view('template/home',$data);// view/index.php
+	 	$this->load->view('template/home',$data);// view/index.ph
 	}
 }
