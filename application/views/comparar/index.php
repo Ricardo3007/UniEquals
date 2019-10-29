@@ -1,84 +1,57 @@
+
 <br>
 <div class="card">
     <div class="card-body">
-        <h5 class="card-title">Comparar Universidades</h5>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" />
-                        <text x="40%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
+        <h5 class="card-title">Selecciona el area de estudio</h5>
+        <form id="formFiltro" action="Comparar/comparar" Method="POST">
+            <div class="row">
+                <div class="col-md-3">
+                    <label for="dropCategoria">Categoria</label>
+                    <select name="dropCategoria" id="dropCategoria" class="form-control">
+                    <option value="0">Seleccionar</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                <label for="txtPresupuesto">Presupuesto: <span id="valorPresupuesto"></span></label>
+                <input id="txtPresupuesto" name="txtPresupuesto" type="range"
+                    min="300000" max="20000000" step="150000" value="2500000"
+                    class="form-control" onchange="rangoNumerico(this)" >
+                </div>
+                <div class="col-md-3">
+                    <button id="btnEnviar" type="submit"class="btn btn-primary btnMargin">
+                        Continuar
+                    </button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" />
-                        <text x="40%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" />
-                        <text x="40%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-4 shadow-sm">
-                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                        <title>Placeholder</title>
-                        <rect width="100%" height="100%" fill="#55595c" />
-                        <text x="40%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                    </svg>
-                    <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        //comparar/index
+        var input = document.getElementById("txtPresupuesto");
+        rangoNumerico(input);
+    });
+    function rangoNumerico(input){
+        console.log(input.value);
+        var numero = parseInt(input.value);
+        var numero =  numero.toLocaleString('en-ES').replace(',','.').replace(',','.');
+        $("#valorPresupuesto").text(numero);
+    }
+    $("#formFildtro").submit(function (event) {
+
+        var parametros = $('#formFiltro').serialize();
+            
+        $.ajax({
+            type: "POST",
+            url: "<?php echo base_url('comparar/comparar');?>",
+            data: parametros,
+            success: function (result) {
+
+            },
+            error: function (msg) {
+                alert("No se completo la solicitud");
+            },
+        });
+    });
+</script>
