@@ -7,8 +7,7 @@
 		<!-- Bootstrap Core CSS -->
 		<link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.css');?>">
 		<link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.min.css');?>">
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="<?php echo base_url('/assets/css/estilos.css');?>">
+	
 		<!-- Cover CSS -->
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/login.css');?>">
    
@@ -17,7 +16,7 @@
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href="">
   </head>
-  <body class="text-center">
+  <body class="text-center"id="body_login">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
 			<div class="inner">

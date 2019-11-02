@@ -1,8 +1,8 @@
 html,
-body {
+#body_login {
   height: 100%;
 }
-body {
+#body_login {
   height: 100%;
   background-image: url('../../public/imagenes/login.jpg');
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@ body {
   
 }
 
-body {
+#body_login {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -21,6 +21,7 @@ body {
   padding-bottom: 40px;
 
 }
+
 
 /*
  * Header

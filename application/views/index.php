@@ -37,7 +37,7 @@
 							<a class="nav-link js-scroll-trigger" href="#inicio">Inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Universidad');?>">Blog</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#test">Test</a>

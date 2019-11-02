@@ -1,0 +1,49 @@
+html,
+body{
+    background-image: url('../../public/imagenes/fondo.jpg');
+}
+#body_perfil_universidad {
+  
+    height: 100%;
+  }
+  a:link, a:visited {
+  
+    color: red;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+  color:blue;
+  }
+
+  .jumbotron {
+ height: 300px;
+ width: 100%;
+    background-image: url('../../public/imagenes/pregrado12.jpg');
+    background-repeat: no-repeat;
+ 
+  background-attachment: fixed;
+  
+  }
+  
+  
+  
+  .team-member {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  
+  .team-member img {
+    width: 225px;
+    height: 225px;
+    border: 7px solid rgba(241, 238, 238, 0.589);
+  }
+
+    
+    
+  
+  
