@@ -46,6 +46,24 @@ body {
 .cover-container {
   max-width: 42em;
 }
+#mainNav .navbar-brand {
+  color: #eef1ed;
+  font-family: 'Kaushan Script', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+#mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+  color: #9d9ca0;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  
+  color: rgb(211, 206, 206);
+  
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: #fcfafa;
+}
 
 
 /*
@@ -53,6 +71,7 @@ body {
  */
 .masthead {
   margin-bottom: 2rem;
+  
 }
 
 .masthead-brand {

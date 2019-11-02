@@ -21,17 +21,43 @@
 		<header class="masthead mb-auto">
 			<div class="inner">
 				<!-- <h3><a class="masthead-brand" href="#"><img src="" alt="logo "></a></h1> -->
-				<h3 class="masthead-brand">UniEquals</h3>
 				
-				<nav class="nav nav-masthead justify-content-center">
-					<a class="nav-link active" href="#">Inicio</a>
-					<a class="nav-link" href="#">Blog</a>
-					<a class="nav-link" href="#">Test</a>
-					<a class="nav-link" href="<?php echo base_url('/Login');?>"data-toggle="modal" data-target="#exampleModalCenter" >Login</a>
-					<a class="nav-link" href="#">Register</a>
-					<a class="nav-link" href="#">Nosotros</a>
-					
-				</nav>
+				
+			
+								<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+					<div class="container">
+					<a class="navbar-brand js-scroll-trigger" href="#page-top">UniEquals</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						Menu
+						<i class="fas fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav text-uppercase ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#inicio">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#test">Test</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Login');?>">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#register">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#register">Nosotros</a>
+						</li>
+						</ul>
+					</div>
+					</div>
+					</nav>
+
+
+
 			</div>
 		</header>
 
