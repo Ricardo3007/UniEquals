@@ -2,7 +2,6 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Comparar_model extends CI_Model {
-    var $table='prestamos';
 
     public function __construct()
     {
@@ -10,9 +9,17 @@ class Comparar_model extends CI_Model {
         //$this->load->database();// cargando la conexion a DB
     }
 
-    public function getAll()
+    public function cargarCarrera()
     {
-        $query=$this->db->get("pretamos");
+        $query=$this->db->query("SELECT * FROM carreras");
+        return $query->result();
+    }
+
+    public function cargarUniversidadFiltro()
+    {
+        $codcarrera = $this->input->post('dropCategoria');
+        $presupuesto = $this->input->post('txtPresupuesto');
+        $query=$this->db->query("");
         return $query->result();
     }
 

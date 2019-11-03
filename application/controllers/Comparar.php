@@ -7,21 +7,21 @@ class Comparar extends CI_Controller {
 	{
 		parent::__construct();
 		//$this->load->helper('url');
-		$this->load->model('Comparar_model');//cargando el modelo Usuarios
+		$this->load->model('Comparar_model'); //cargando el modelo Usuarios
 	}
 
 	public function index()
 	{
-	 	//$data['data']=$this->Comparar_model->getAll();	
-	 	$data['content']='comparar/index';
-	 	$this->load->view('template/home',$data);// view/index.php
+	 	$data['carreras']=$this->Comparar_model->cargarCarrera();	
+	 	$data['content'] ='comparar/index';
+	 	$this->load->view('template/home',$data); // view/index.php
 	}
 
-	public function comparar(){
+	public function filtro(){
 		if($this->input->post()){
-			//$data['data']=$this->Comparar_model->getAll();
-			$data['content']='comparar/comparar';
-	 		$this->load->view('template/home',$data);// view/index.php
+			//$data['universidades']=$this->Comparar_model->cargarUniversidadFiltro();
+			$data['content'] ='comparar/comparar';
+	 		$this->load->view('template/home',$data); // view/index.php
 		}
 	}
 }
