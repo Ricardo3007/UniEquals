@@ -43,7 +43,7 @@
 							<a class="nav-link js-scroll-trigger" href="#test">Test</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Login');?>">Login</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Home/login');?>">Login</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#register">Register</a>

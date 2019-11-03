@@ -25,22 +25,50 @@
     <script type="text/javascript" src="<?php echo base_url('/assets/js/jquery.js');?>"></script>
 </head>
 <body>
-    <header>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-            <a class="navbar-brand" href="#">UniEquals</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+<header class="masthead mb-auto">
+			<div class="inner">
+				<!-- <h3><a class="masthead-brand" href="#"><img src="" alt="logo "></a></h1> -->
+				
+				
+			
+								<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+					<div class="container">
+					<a class="navbar-brand js-scroll-trigger" href="#page-top">UniEquals</a>
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+						Menu
+						<i class="fas fa-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarResponsive">
+						<ul class="navbar-nav text-uppercase ml-auto">
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#inicio">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Universidad');?>">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#test">Test</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Home/login');?>">Login</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#register">Register</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link js-scroll-trigger" href="#register">Nosotros</a>
+						</li>
+						</ul>
+					</div>
+					</div>
+					</nav>
+
+
+
+			</div>
+		</header>
+			
 
     <main role="main" class="flex-shrink-0">
         <div class="container-fluid">
@@ -54,6 +82,7 @@
             <span class="text-muted">Place sticky footer content here.</span>
         </div>
     </footer>
+    </div>
 </body>
 <script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.js');?>"></script>
 <script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>

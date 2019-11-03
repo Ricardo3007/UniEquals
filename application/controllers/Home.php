@@ -3,23 +3,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	public function __construct()
+	{
+		parent::__construct();
+		//$this->load->helper('url');
+		$this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->library('form_validation');
+		$this->load->model('Home_model'); //cargando el modelo Usuarios
+	}
 	public function index()
 	{
-		$this->load->view('index');
+	 	$data['content'] ='index';
+		 $this->load->view('index',$data); // view/index.php
 	}
+	public function login()
+	{
+	 	$data['content'] ='login/login';
+		 $this->load->view('login/login',$data); // view/index.php
+	}
+
+    public function verifica()
+    {
+        $email = $this->input->post('email');
+        $password = $this->input->post('password');
+
+        if($this->Home_model->login($email, $password))
+        {
+
+			$usuariocodtipo=$this->session->userdata('user_data')['tipousuarios'];
+		
+
+
+			switch ($usuariocodtipo) {
+				case 1:
+				    $this->load->view('index');
+					break;
+			    case 2:
+			         redirect('/Universidad');
+			         break;
+				case 3:
+				    $this->load->view('index');
+					break;
+				
+				default:
+					# code...
+					break;
+			}
+
+		}
+		else
+        {
+            $this->session->set_flashdata('error','Contraseña incorrecta');	
+       	
+            $data['content']='login/login';
+            $this->load->view('login/login',$data);
+            
+        }
+    }
+	
 }
