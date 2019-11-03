@@ -6,7 +6,7 @@ class Comparar_model extends CI_Model {
     public function __construct()
     {
         parent::__construct();
-        //$this->load->database();// cargando la conexion a DB
+        $this->load->database();// cargando la conexion a DB
     }
 
     public function cargarCarrera()
