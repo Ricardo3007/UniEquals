@@ -58,6 +58,17 @@ i.fa {
     display: none;
 }
 
+.ucard{
+    min-height: 300px;
+}
+
+.seleccion{
+    background-color: #ffff0073;
+}
+
+.minalto{
+    min-height: 200px;
+}
 .containerLogin {
     position: fixed !important;
 }
