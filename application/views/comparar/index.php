@@ -54,6 +54,7 @@
     </div>
 </div>
 <div id="divCompararResult" class="nodisplay">
+    <a onclick='volver();' class='btn btn-danger text-white'>Atras</a>
     <div id="divResultCarreras" class="row">
 
     </div>
@@ -64,6 +65,17 @@ $(document).ready(function() {
     rangoNumerico('txtPresupuestoMin');
     rangoNumerico('txtPresupuestoMax');
 });
+function volver(){
+    //Removemos la seleccion
+    $(".seleccion").each(function(index) {
+        $(this).removeClass("seleccion");
+    });
+
+    $("#divCompararResult").hide(100);
+    $("#divFiltro").show(250);
+    $("#divComparar").show(250);
+
+}
 function panelToggle() {
     $("#panel").toggle(200);
 }
@@ -119,8 +131,11 @@ $("#formFiltro").submit(function(event) {
                             ca +="    </div>";
                             ca +="</div>";                    
                         }
-                        $('#divResultado').html(ca);
                     }
+                    $('#divResultado').html(ca);
+                }else{
+                    $('#divResultado').html("");
+                    $("#divComparar").hide();
                 }
             },
             error: function(msg) {
@@ -170,6 +185,7 @@ $("#formComparar").submit(function(event) {
 
                             ca +="<div class='" + col + "'>";
                             ca +="<div class='card'>";
+                            ca +="    <div class='card-header bg-info'><h5 class='text-white'>" + listCar[i].razonsocial.toUpperCase() + "</h5></div>";
                             ca +="    <div class='card-body minalto'>";
                             ca +="        <h5 class='card-title'>" + listCar[i].nombre + "</h5>";
                             ca +="        <h5 class='card-subtitle mb-2 text-muted'>Perfil Ocupacional</h5>";
