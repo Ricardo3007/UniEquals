@@ -26,7 +26,7 @@ class Comparar_model extends CI_Model {
     }
 
     public function buscarDetalleCarreras($where){
-        $consulta = "SELECT car.`nombre`,car.`titulo`,dcar.*,edu.`cod` 'coduniversidad',edu.`descripcion`,form.`tipoformacion`,mo.`tipomodalidad` FROM `detallecarreras` dcar INNER JOIN `entidadeducativa` edu ON dcar.`entidadeducativa_cod`=edu.`cod` INNER JOIN `modalidad` mo ON dcar.`modalidad_cod`=mo.`cod` INNER JOIN `formacion` form ON dcar.`formacion_cod`=form.`cod` INNER JOIN `carreras` car ON dcar.`carreras_cod`=car.`cod` WHERE ".$where." ";
+        $consulta = "SELECT car.`nombre`,car.`titulo`,dcar.*,edu.`cod` 'coduniversidad',edu.`razonsocial`,edu.`descripcion`,form.`tipoformacion`,mo.`tipomodalidad` FROM `detallecarreras` dcar INNER JOIN `entidadeducativa` edu ON dcar.`entidadeducativa_cod`=edu.`cod` INNER JOIN `modalidad` mo ON dcar.`modalidad_cod`=mo.`cod` INNER JOIN `formacion` form ON dcar.`formacion_cod`=form.`cod` INNER JOIN `carreras` car ON dcar.`carreras_cod`=car.`cod` WHERE ".$where." ";
         $query=$this->db->query($consulta);
         return $query->result();
     }
