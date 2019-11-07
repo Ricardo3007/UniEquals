@@ -37,6 +37,10 @@ class Home_model extends CI_Model {
         $this->session->unset_userdata('user_data');
         return false;
     }
+
+
+
+    
     public function cargarTipoUsuario()
     {
         $query=$this->db->query("SELECT * FROM tipousuarios");

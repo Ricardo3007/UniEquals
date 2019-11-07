@@ -8,22 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>UniEquals - </title>
-    <!-- Imagen Icon -->
-
+    <!-- PORBLEMA CON LAS LIBRERIAS LOCALES NO ENCONTRE EL PORQUE PERO TOCO MONTARLAS VIRTUALES -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.css');?>">
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.min.css');?>">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/cover.css');?>">
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/perfiles.css');?>">
     <!-- Datatables CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/dataTables.bootstrap4.min.css');?>" />
-    <!-- Notificaciones CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/toastr.min.css');?>" />
-    <!-- Multi-Select CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/select2.min.css');?>">
+ 
     <!-- Se llama aca para que cargue de primero -->
     <script type="text/javascript" src="<?php echo base_url('/assets/js/jquery.js');?>"></script>
-</head>
 <body>
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 <header class="masthead mb-auto">
@@ -34,8 +32,8 @@
 			
 								<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 					<div class="container">
-					<a class="masthead-brand" href="#"><img src="public/imagenes/logo.png" alt="logo "></a>
 					
+					<a class="navbar-brand js-scroll-trigger" href="<?php echo base_url('/Universidad');?>"><img src="public/imagenes/logo.png" alt="logo "></a>
 					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						Menu
 						<i class="fas fa-bars"></i>
@@ -43,23 +41,19 @@
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav text-uppercase ml-auto">
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Home');?>">Inicio</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Universidad');?>">Inicio</a>
 						</li>
+            <li class="nav-item">
+							<a class="nav-link js-scroll-trigger" id="miperfil"  href="#miperfil">Mi Perfil</a>
+                        </li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('#blog');?>">Blog</a>
+							<a class="nav-link js-scroll-trigger"  id="nosotros" href="<?php echo base_url('#nosotros');?>"> Nosotros</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#test">Test</a>
+					
+                        <li class="nav-item">
+							<a class="nav-link js-scroll-trigger" id="salir"  href="<?php echo base_url('Home/cerrar_sesion');?>">Salir</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" id="login" href="<?php echo base_url('/Home/login');?>">Login</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#register">Register</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#register">Nosotros</a>
-						</li>
+						
 						</ul>
 					</div>
 					</div>
@@ -86,14 +80,7 @@
 	  </footer>
     </div>
 </body>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/bootstrap.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/jquery.dataTables.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/toastr.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/funciones.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/dataTables.bootstrap4.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/sweetalert.min.js');?>"></script>
-<script type="text/javascript" src="<?php echo base_url('/assets/js/select2.min.js');?>"></script>
+
 </html>
 <script>
 

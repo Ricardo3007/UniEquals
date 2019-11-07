@@ -14,14 +14,27 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
-	 	$data['content'] ='index';
-		 $this->load->view('index',$data); // view/index.php
+	 	$data['content'] ='template/adelante';
+		 $this->load->view('template/home',$data); // view/index.php
 	}
+	public function registrado()
+	{
+	 	$data['content'] ='template/adelante';
+		 $this->load->view('template/registrado',$data); // view/index.php
+	}
+	
 	public function login()
 	{
 	 	$data['content'] ='login/login';
-		 $this->load->view('login/login',$data); // view/index.php
+		 $this->load->view('template/home',$data); // view/index.php
 	}
+	public function cerrar_sesion()
+   {
+     $this->session->unset_userdata('user_data');//elimina la session
+     	
+     $data['content']='login/login';
+     $this->load->view('template/home',$data);
+  }
 
     public function verifica()
     {
@@ -43,7 +56,7 @@ class Home extends CI_Controller {
 			         redirect('/Universidad');
 			         break;
 				case 3:
-				    $this->load->view('index');
+				redirect('Home/registrado');
 					break;
 				
 				default:
@@ -57,7 +70,7 @@ class Home extends CI_Controller {
             $this->session->set_flashdata('error','Contraseña incorrecta');	
        	
             $data['content']='login/login';
-            $this->load->view('login/login',$data);
+            $this->load->view('template/home',$data);
             
         }
     }

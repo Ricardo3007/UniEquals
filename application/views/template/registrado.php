@@ -34,8 +34,8 @@
 			
 								<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
 					<div class="container">
-					<a class="masthead-brand" href="#"><img src="public/imagenes/logo.png" alt="logo "></a>
-					
+						
+					<a class="navbar-brand js-scroll-trigger" href="#page-top">UniEquals</a>
 					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						Menu
 						<i class="fas fa-bars"></i>
@@ -43,23 +43,24 @@
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav text-uppercase ml-auto">
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Home');?>">Inicio</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('Home/registrado');?>">Inicio</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('#blog');?>">Blog</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Universidad');?>">Blog</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#test">Test</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" id="login" href="<?php echo base_url('/Home/login');?>">Login</a>
+							<a class="nav-link js-scroll-trigger"  id="nosotros" href="<?php echo base_url('#perfil');?>"> Nosotros</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#register">Register</a>
+							<a class="nav-link js-scroll-trigger" id="miperfil"  href="#miperfil">Mi Perfil</a>
+                        </li>
+                        <li class="nav-item">
+							<a class="nav-link js-scroll-trigger" id="salir"  href="<?php echo base_url('Home/cerrar_sesion');?>">Salir</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#register">Nosotros</a>
-						</li>
+						
 						</ul>
 					</div>
 					</div>
@@ -79,7 +80,7 @@
     </main>
 
 
-	<footer class="mastfoot mt-auto text-center">
+	<footer class="mastfoot mt-auto">
 		<div class="inner">
 		<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
 		</div>
@@ -97,3 +98,12 @@
 </html>
 <script>
 
+function myFunction() {
+    var x = document.getElementById("login");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
