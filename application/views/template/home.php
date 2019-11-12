@@ -55,7 +55,7 @@
 							<a class="nav-link js-scroll-trigger" id="login" href="<?php echo base_url('/Home/login');?>">Login</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="#register">Register</a>
+							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Home/registro');?>">Register</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger" href="#register">Nosotros</a>

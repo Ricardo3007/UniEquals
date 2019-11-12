@@ -1,3 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!--Modal: Login / Register Form-->
 <div class="modal fade bd-example-modal-lg" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 <!-- CASCADING -->
@@ -12,28 +15,53 @@
              <ul class="nav nav-tabs md-tabs tabs-2 " role="tablist">
                  <li class="nav-item">
                     <a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="fas fa-user mr-1"></i>
-                    Login</a>
+                    Insertar Pregrado</a>
                  </li>
                  <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
-                    Register</a>
+                    Crear nueva carrera</a>
                  </li>
              </ul><!-- CIERRA NAV -->
 
         <!-- Tab panels -->
         <div class="tab-content">
+
+        
             <!--Panel 7-->
             <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
               
  <!--Panel 7-->
  <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+<h3><?php  
 
+?>
+</h3>
 <!--Body-->
 <form   method="post" name="formnew" id="formnew">
     <div class="modal-body">
        <p class="statusMsg">
        <div id="resultados"> </div>
        </p>
+       <div class="card-body d-flex justify-content-between align-items-center">
+       <button type="button" class="btn btn-sm btn-danger " data-toggle="popover" title="Creacion de carreras" data-content="Antes de insertar un pregrado verifique que la carrera este disponible en la base de datos de lo contrario crearla en la pestaña crear carrera">Info</button>
+					</div>
+<!-- Modal Header -->
+<div class="modal-header">
+
+<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad"><?php if(isset($razon)){ foreach($razon as $ent){?>
+                        <?php echo $ent->razonsocial; ?></option>
+                        <?php } } ?></h1>
+                        <br>
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      
+      
+           <br>.
+           <br>        
+                    
+     
 <!-- ROWS -->
 <div class="row">
 
@@ -109,15 +137,7 @@
           </div>
           </div>
       </div>
-      <div class="col-md-3 ml-auto">
-                    <label for="dropEntidad">ENTIDAD</label>
-                    <select name="dropEntidad" id="dropEntidad" class="form-control">
-                        <option value="0">Seleccionar</option>
-                        <?php if(isset($entidadeducativa)){ foreach($entidadeducativa as $ent){?>
-                        <option value="<?php echo $ent->cod; ?>"><?php echo $ent->razonsocial; ?></option>
-                        <?php } } ?>
-                    </select>
-     </div>
+      
      <div class="col-md-3 ml-auto">
                     <label for="dropCategoria">NOMBRE CARRERA</label>
                     <select name="dropCategoria" id="dropCategoria" class="form-control">
@@ -153,14 +173,16 @@
 
 </div><!-- Fin modal body-->
 
-  <!-- Modal Footer -->
-  <div class="modal-footer">
-    <div class='col-md-2'>
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+  <div class='col-md-2'>
         <button type="button" class="btn btn-danger" data-dismiss="modal"  >Cerrar</button>
     </div>
-    <div class='col-md-10'>
-        <button type="submit" class="btn btn-primary" id="guardar">Guardar</button>
+  <div class='col-md-2'>
+        <button type="submit" class="btn btn-success" id="guardar">Guardar</button>
     </div>
+    
+    
 </div><!-- FIN FOOTER -->
 
 </form>  
@@ -175,22 +197,42 @@
        <p class="statusMsg">
        <div id="resultados2"> </div>
        </p>
-
+       <div class="modal-header">
+<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad"><?php if(isset($razon)){ foreach($razon as $ent){?>
+                        <?php echo $ent->razonsocial; ?></option>
+                        <?php } } ?></h1>
+                  <br><br>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      
             <!--Body-->
             <div class="modal-body">
            
+            <div class="row">
 
-            <div class="form-group">
-    <label for="uname">NOMBRE DE CARRERA:</label>
-    <input type="text" class="form-control"  placeholder="Digite el nombre de la carrera" name="nombre" required>
-    
-    
-  </div>
+<div class="col-md-6 ml-auto"> 
+       <div class="form-group">
+          <label>NOMBRE:</label>
+       <div class="input-group">
+       <div class="input-group-addon">
+            <i class="fa fa-user"></i>
+          </div>
+               <input type="text" class="form-control" name="nombre" placeholder=" Nombre de carrera" required>
+          </div>
+          </div>
+</div>
 
-  <div class="form-group">
-    <label for="uname">TITULO QUE OTORGA:</label>
-    <input type="text" class="form-control"  placeholder="Digite el nombre del titulo que otorga" name="titulo" required>
-    
+<div class="col-md-6 ml-auto">
+       <div class="form-group">
+          <label>ACRETITULODITACION:</label>
+       <div class="input-group">
+       <div class="input-group-addon">
+            <i class="fa  fa-user"></i>
+          </div>
+               <input type="text" class="form-control" name="titulo" placeholder="Titulo que otorga" required>
+          </div>
+          </div>
+</div>
   </div>
 
 
@@ -198,18 +240,17 @@
             </div><!-- CIERRA BODY -->
                         </form>
 
-            <!--Footer-->
-            <div class="modal-footer">
-              <div class="options text-right">
-                
-              </div>
-              <div class="text-center form-sm mt-2">
-                <button class="btn btn-info" type="submit" id="guardar">guardar <i class="fas fa-sign-in ml-1"></i></button>
-              </div>
-
-              <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close</button>
-            </div><!-- CIERRA FOOTER -->
-         
+         <!-- Modal Footer -->
+  <div class="modal-footer">
+  <div class='col-md-2'>
+        <button type="button" class="btn btn-danger" data-dismiss="modal"  >Cerrar</button>
+    </div>
+  <div class='col-md-2'>
+        <button type="submit" class="btn btn-success" id="guardar">Guardar</button>
+    </div>
+    
+    
+</div><!-- FIN FOOTER -->
          
           </div> <!--CIERRA Panel 8-->
 
@@ -307,7 +348,7 @@ function removeMessage(){
                   },
                 success: function(datos){
                   $('#resultados2').html(datos);
-                  limpiar();     
+                  //limpiar();     
                   removeMessage();
             }
            
@@ -319,3 +360,8 @@ function removeMessage(){
  
 </script>
 
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>

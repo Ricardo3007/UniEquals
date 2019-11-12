@@ -21,6 +21,7 @@ class Home_model extends CI_Model {
         {
                 $row=$query->row();
                 $data=array('user_data'=>array(
+                    'cod'=>$row->cod,
                     'nombres'=>$row->nombres,
                     'apellidos'=>$row->apellidos,
                     'genero'=>$row->genero,
@@ -31,21 +32,35 @@ class Home_model extends CI_Model {
                 );
                 $this->session->set_userdata($data);
                 //$this->session->userdata('user_data')['id'];
-               
                 return true;
         }
         $this->session->unset_userdata('user_data');
         return false;
     }
+    public function agregrarusuario()
+    {
+        $data['nombres']=$this->input->post('nombres');
+        $data['apellidos']=$this->input->post('apellidos');
+        $data['genero']=$this->input->post('genero');
+        $data['email']=$this->input->post('email');
+        $data['password']=$this->input->post('password');
+        $data['tipousuarios_codtipo']=3;
+        
+    
+        return $this->db->insert($this->table, $data);
+    }
+
+
+
+
 
 
 
     
-    public function cargarTipoUsuario()
-    {
-        $query=$this->db->query("SELECT * FROM tipousuarios");
-        return $query->result();
-    }
+
+
+    
+    
 
     
 

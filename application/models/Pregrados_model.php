@@ -118,6 +118,20 @@ public function cargarCarrera()
         $query=$this->db->query("SELECT * FROM entidadeducativa");
         return $query->result();
     }
+
+    public function usuarioentidad($codusuario){
+        $consulta = "SELECT eedu.razonsocial,eedu.cod FROM `usuarios` usu INNER JOIN `usuariouniversidad` uuni ON usu.`cod`=uuni.`codusuario` INNER JOIN `entidadeducativa` eedu ON uuni.`codentidad`=eedu.`cod`  WHERE usu.cod=$codusuario ";
+        $query=$this->db->query($consulta);
+        return $query->result();
+
+    }
+
+
+
+
+
 }//end class
+
+
 
 ?>

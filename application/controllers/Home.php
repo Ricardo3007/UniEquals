@@ -16,6 +16,8 @@ class Home extends CI_Controller {
 	{
 	 	$data['content'] ='template/adelante';
 		 $this->load->view('template/home',$data); // view/index.php
+		
+
 	}
 	public function registrado()
 	{
@@ -26,6 +28,11 @@ class Home extends CI_Controller {
 	public function login()
 	{
 	 	$data['content'] ='login/login';
+		 $this->load->view('template/home',$data); // view/index.php
+	}
+	public function registro()
+	{
+	 	$data['content'] ='login/registro';
 		 $this->load->view('template/home',$data); // view/index.php
 	}
 	public function cerrar_sesion()
@@ -72,7 +79,26 @@ class Home extends CI_Controller {
             $data['content']='login/login';
             $this->load->view('template/home',$data);
             
-        }
-    }
+		}
+
+		
+		
+	}
+	public function guardarusuario(){
+		if($this->Home_model->agregrarusuario())
+		   echo "Registro Guardado";
+		else 
+		echo "Error al guardar";
+	}
+	public function usuarioentidad(){
+
+
+/* 
+
+		 $codusuario=$this->session->userdata('user_data')['cod'];
+		$enti=$this->Home_model->usuarioentidad($codusuario); */ 
 	
+var_dump($enti);
+
+	}
 }

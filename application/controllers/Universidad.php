@@ -12,6 +12,10 @@ public function __construct()
 
 	public function index()
 	{
+		$codusuario=$this->session->userdata('user_data')['cod'];
+		 
+		$data['razon'] = $this->Pregrados_model->usuarioentidad($codusuario);
+		/* var_dump($data['razon']); */
 		$data['carreras'] = $this->Pregrados_model->cargarCarrera();
 		$data['entidadeducativa'] = $this->Pregrados_model->cargarEntidad();	
 		$data['modalidad'] = $this->Pregrados_model->cargarModalidad();
@@ -57,6 +61,7 @@ public function __construct()
 		   echo "Registro Guardado";
 		else 
 		echo "Error al guardar";
+		
 	}
 
 

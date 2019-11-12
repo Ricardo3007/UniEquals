@@ -6,6 +6,7 @@
 <br>
 
 <div class="text-center">
+
       <div class="row">
         <div class="col-lg-12 text-center">
         
@@ -30,8 +31,15 @@
           <div class="team-member">
            <a data-toggle="modal" href="#modalForm" data-backdrop="static"> <img class="mx-auto rounded-circle" src="public/imagenes/crear.jpg" alt="dos"></a>
            
-            <a class="nav-link js-scroll-trigger"data-toggle="modal" href="#modalForm" data-backdrop="static"> <h4>Nuevos Pregrados</h4></a>
+            <a class="nav-link js-scroll-trigger"data-toggle="modal" href="#modalForm" data-backdrop="static"  > <h4>Nuevos Pregrados</h4></a>
+            <?php 
 
+            
+                    $user=$this->session->userdata('user_data')['cod'];
+                   /*  echo $user */;
+                   ?>
+                    <a class="nav-link js-scroll-trigger"href=" <?php echo base_url('Home/usuarioentidad')?>"><h4>info</h4></a>
+                  
            
             <p class="text-muted">Podras insertar los nuevos pegrados adquiridos en la universidad.</p>
           </div>
@@ -49,7 +57,7 @@
       </div>
        
       </div>
-   
+   	
 <?php
 $this->load->view('pregrados/nuevo'); // view/index.php
 ?>

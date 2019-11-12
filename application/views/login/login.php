@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<!-- Bootstrap Core CSS -->
-		<link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.css');?>">
-		<link rel="stylesheet" href="<?php echo base_url('/assets/css/bootstrap.min.css');?>">
-	
-		<!-- Cover CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('/assets/css/login.css');?>">
-   
-
-    	<title>UniEquals</title>
-        <!-- Custom styles for this template -->
-        <link rel="stylesheet" href="">
-  </head>
-  <body class="text-center">
 
 
 
@@ -43,5 +24,3 @@
 </form>
 </main>
 </div>
-</body>
-</html>
