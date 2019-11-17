@@ -14,7 +14,7 @@ class Comparar extends CI_Controller {
 	{
 	 	$data['carreras'] = $this->Comparar_model->cargarCarrera();	
 	 	$data['content'] ='comparar/index';
-	 	$this->load->view('template/home',$data); // view/index.php
+	 	$this->load->view('template/homecomparar',$data); // view/index.php
 	}
 
 	public function filtro()

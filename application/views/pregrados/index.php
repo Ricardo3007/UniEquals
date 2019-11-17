@@ -22,35 +22,40 @@
         <div class="col-sm-4">
           <div class="team-member">
           <a href="#"><img class="mx-auto rounded-circle" src="public/imagenes/pregra.jpg" alt="uno"></a>
-            <a class="nav-link js-scroll-trigger" href="#"><h4 >Ver pregrados</h4></a>
+          <a class="nav-link js-scroll-trigger" href="<?php echo base_url('Universidad/indexadministracion');?>"  > <h4>ADMINISTRACION</h4></a>
+            <?php 
+ 
             
-            <p class="text-muted" >Podras ver todos los pregrados inscritos y editarlos</p>
+                    $user=$this->session->userdata('user_data')['cod'];
+                   /*  echo $user */;
+                   ?>
+            <p class="text-muted" >Podras administrar toda la informacion referente a tu universidad</p>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
            <a data-toggle="modal" href="#modalForm" data-backdrop="static"> <img class="mx-auto rounded-circle" src="public/imagenes/crear.jpg" alt="dos"></a>
            
-            <a class="nav-link js-scroll-trigger"data-toggle="modal" href="#modalForm" data-backdrop="static"  > <h4>Nuevos Pregrados</h4></a>
+            <a class="nav-link js-scroll-trigger"data-toggle="modal" href="#modalForm" data-backdrop="static"  > <h4>INSERTAR PREGRADO </h4></a>
             <?php 
 
             
                     $user=$this->session->userdata('user_data')['cod'];
                    /*  echo $user */;
                    ?>
-                    <a class="nav-link js-scroll-trigger"href=" <?php echo base_url('Home/usuarioentidad')?>"><h4>info</h4></a>
+                  
                   
            
-            <p class="text-muted">Podras insertar los nuevos pegrados adquiridos en la universidad.</p>
+            <p class="text-muted">Podras insertar nuevos pregrados adquiridos en la universidad  de manera mas rapida sin necesidad de entrar a la plataforma de administracion .</p>
           </div>
         </div>
         <div class="col-sm-4">
           <div class="team-member">
           <a href="#"> <img class="mx-auto rounded-circle" src="public/imagenes/perfil.jpg" alt="tres"></a>
-            <a class="nav-link js-scroll-trigger" href="#">  <h4>Ver interesados</h4></a>
+            <a class="nav-link js-scroll-trigger" href="#">  <h4>PERFIL</h4></a>
 
          
-            <p class="text-muted">Podras ver una lista de usuarios interesados en estudiar en vuestra universidad , tambien podras imprimir un documentos pdf</p>
+            <p class="text-muted">Podras acceder y actualizar la informacion de tus perfiles tanto personal, como el perfil universitario</p>
            
           </div>
         </div>
@@ -60,4 +65,6 @@
    	
 <?php
 $this->load->view('pregrados/nuevo'); // view/index.php
+$this->load->view('pregrados/editar');
+/* $this->load->view('pregrados/listar_pregrados'); // view/index.php */
 ?>

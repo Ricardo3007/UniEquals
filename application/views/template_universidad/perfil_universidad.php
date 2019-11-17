@@ -42,12 +42,8 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
 						<ul class="navbar-nav text-uppercase ml-auto">
-						<li class="nav-item">
-							<a class="nav-link js-scroll-trigger" href="<?php echo base_url('/Universidad');?>">Inicio</a>
-						</li>
-            <li class="nav-item">
-							<a class="nav-link js-scroll-trigger" id="miperfil"  href="#miperfil">Mi Perfil</a>
-                        </li>
+						
+            
 						<li class="nav-item">
 							<a class="nav-link js-scroll-trigger"  id="nosotros" href="<?php echo base_url('#nosotros');?>"> Nosotros</a>
 						</li>

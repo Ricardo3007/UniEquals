@@ -7,6 +7,7 @@
   <div class="modal-dialog modal-xl cascading-modal" role="document">
     <!--Content-->
        <div class="modal-content">
+       <?php if(isset($entidad)){ foreach($entidad as $ent){?>
 
       <!--Modal cascading tabs-->
           <div class="modal-c-tabs ">
@@ -42,23 +43,21 @@
        <p class="statusMsg">
        <div id="resultados"> </div>
        </p>
-       <div class="card-body d-flex justify-content-between align-items-center">
-       <button type="button" class="btn btn-sm btn-danger " data-toggle="popover" title="Creacion de carreras" data-content="Antes de insertar un pregrado verifique que la carrera este disponible en la base de datos de lo contrario crearla en la pestaña crear carrera">Info</button>
-					</div>
+      
 <!-- Modal Header -->
 <div class="modal-header">
 
-<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad"><?php if(isset($razon)){ foreach($razon as $ent){?>
-                        <?php echo $ent->razonsocial; ?></option>
-                        <?php } } ?></h1>
+<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad">
+                        <?php echo $ent->razonsocial; ?>
+                        </h1>
                         <br>
 
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         
       </div>
-      
-      
-           <br>.
+      <div class="card-body d-flex justify-content-between align-items-center">
+       <button type="button" class="btn btn-sm btn-danger " data-toggle="popover" title="Creacion de carreras" data-content="Antes de insertar un pregrado verifique que la carrera este disponible en la base de datos de lo contrario crearla en la pestaña crear carrera"> Informacion importante</button>
+					</div>
            <br>        
                     
      
@@ -198,8 +197,8 @@
        <div id="resultados2"> </div>
        </p>
        <div class="modal-header">
-<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad"><?php if(isset($razon)){ foreach($razon as $ent){?>
-                        <?php echo $ent->razonsocial; ?></option>
+<h1 class="text-uppercase" name="dropEntidad" id="dropEntidad">
+                        <?php echo $ent->razonsocial; ?>
                         <?php } } ?></h1>
                   <br><br>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -224,7 +223,7 @@
 
 <div class="col-md-6 ml-auto">
        <div class="form-group">
-          <label>ACRETITULODITACION:</label>
+          <label>TITULO:</label>
        <div class="input-group">
        <div class="input-group-addon">
             <i class="fa  fa-user"></i>
